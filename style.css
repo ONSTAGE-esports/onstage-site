@@ -331,3 +331,163 @@ section{
   opacity:0;
   transform:translateY(30px);
 }
+
+/* ===== SECTION ===== */
+
+section{
+  padding:120px 10%;
+  scroll-margin-top:120px;
+}
+
+.about-card{
+  background:rgba(255,255,255,.05);
+  padding:40px;
+  border-radius:20px;
+  line-height:2;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.about-card p:not(:last-child){
+  margin-bottom:15px;
+}
+
+/* ===== VOL7 ===== */
+
+.vol7-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.info-box{
+  background:rgba(255,255,255,.05);
+  padding:30px;
+  border-radius:20px;
+  transition:.3s ease;
+}
+
+.info-box:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+
+.info-box h3{
+  color:#FFF100;
+  margin-bottom:15px;
+}
+
+.info-box .btn{
+  margin-top:10px;
+  margin-right:10px;
+}
+
+/* ===== PARTNER ===== */
+
+.partner-subtitle{
+  text-align:center;
+  margin-bottom:30px;
+  opacity:.8;
+}
+
+#partner .card{
+  text-align:center;
+}
+
+/* ===== YOUTUBE ===== */
+
+#youtube .about-card{
+  text-align:center;
+}
+
+/* ===== CARD HEIGHT ===== */
+
+.card{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:150px;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+
+.section-hidden{
+  opacity:0;
+  transform:translateY(40px);
+  transition:
+    opacity .6s ease,
+    transform .6s ease;
+}
+
+.section-show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width:768px){
+
+  header{
+    flex-direction:column;
+    gap:15px;
+    padding:15px;
+  }
+
+  .logo span{
+    font-size:22px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+  }
+
+  nav a{
+    font-size:14px;
+  }
+
+  .hero{
+    padding:120px 5%;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero h2{
+    font-size:22px;
+  }
+
+  .hero p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .section-title{
+    font-size:30px;
+    text-align:center;
+  }
+
+  section{
+    padding:80px 5%;
+  }
+
+  .about-card{
+    padding:25px;
+  }
+
+  .card{
+    min-height:auto;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+}
