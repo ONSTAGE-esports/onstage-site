@@ -27,64 +27,50 @@
 
 </div>
 
+<!-- ロゴ -->
+<img src="images/logo.png" alt="ON STAGE ロゴ">
+
+<!-- ナビ -->
 <nav>
-
-<a href="#about">私たちについて</a>
-
-<a href="#events">過去開催大会一覧</a>
-  
-<a href="#youtube">YouTube</a>
-
-<a href="#vol7.0">次回開催</a>
-
+  <a href="#about">私たちについて</a>
+  <a href="#events">過去開催大会一覧</a>
+  <a href="#youtube">YouTube</a>
+  <a href="#vol7">次回開催</a>
   <a href="#partner">PARTNER</a>
-
-<a href="#contact">お問い合わせ</a>
-
+  <a href="#contact">お問い合わせ</a>
 </nav>
 
 </header>
 
 
 
+<!-- Hero -->
 <section class="hero">
 
-<div class="hero-overlay"></div>
+  <div class="hero-content">
 
-<div class="hero-content">
+    <h1>ON STAGE:</h1>
 
-<h1>ON STAGE:</h1>
+    <h2>EVERYONE HAS A STAGE.</h2>
 
-<h2>EVERYONE HAS A STAGE.</h2>
+    <p>
+      学生が創る、次世代のeスポーツイベント<br>
+      全員が主役になれる舞台
+    </p>
 
-<p>
+    <div class="hero-buttons">
+      <a href="#vol7" class="btn">
+        参加する
+      </a>
 
-学生が創る、次世代のeスポーツイベント<br>
+      <a href="#events" class="btn btn-outline">
+        過去大会一覧
+      </a>
+    </div>
 
-全員が主役になれる舞台
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#vol7.0" class="btn">
-
-参加する
-
-</a>
-
-<a href="#events" class="btn btn-outline">
-
-過去大会一覧
-
-</a>
-
-</div>
-
-</div>
+  </div>
 
 </section>
-
 
 
 <section id="about">
@@ -201,24 +187,33 @@ ON STAGE:は学生主体で運営するeスポーツコミュニティです。
 
 </section>
 
+<!-- YouTube -->
 <section id="youtube">
-<h2 class="section-title"> 
-  YouTube
-</h2> 
+
+  <h2 class="section-title">
+    YouTube
+  </h2>
+
   <div class="about-card">
-<p>
-過去大会の配信アーカイブはこちらからご覧いただけます。
-</p>
-<br>
-<a
-class="btn"
-href="https://youtube.com/@onstage33333?si=br_UtVKLgA-gqJmL"
-  target="_blank"
->
-  ▶ YouTube
-</a>
-</div>
-  </section>
+
+    <p>
+      過去大会の配信アーカイブはこちらからご覧いただけます。
+    </p>
+
+    <br>
+
+    <a
+      class="btn"
+      href="https://youtube.com/@onstage33333?si=br_UtVKLgA-gqJmL"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ▶ YouTube
+    </a>
+
+  </div>
+
+</section>
 <section id="vol7.0">
 
 <h2 class="section-title">
@@ -378,54 +373,46 @@ COMING SOON
 </section>
 
   
+<!-- CONTACT -->
 <section id="contact">
 
-<h3 class="section-title">
+  <h2 class="section-title">
+    お問い合わせ
+  </h2>
 
-お問い合わせ
+  <div class="contact">
 
-</h3>
+    <a
+      href="https://x.com/ons_tage"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      公式X
+    </a>
 
-<div class="contact">
+    <a href="mailto:ONSTAGE.Student@gmail.com">
+      メールで問い合わせる
+    </a>
 
-<a
-
-href="https://x.com/ons_tage"
-
-target="_blank"
-
->
-
-公式X
-
-</a>
-
-<a
-
-href="mailto:ONSTAGE.Student@gmail.com"
-
->
-
-メールで問い合わせる
-
-</a>
-
-</div>
+  </div>
 
 </section>
 
 
-
+<!-- Footer -->
 <footer>
-
-© 2026 ON STAGE:
-
+  © <span id="year"></span> ON STAGE:
 </footer>
 
 </body>
 
 </html>
+<!-- 一番最後のscript -->
 <script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
 const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(entries => {
@@ -440,4 +427,5 @@ sections.forEach(sec => {
   sec.classList.add("section-hidden");
   observer.observe(sec);
 });
+
 </script>
