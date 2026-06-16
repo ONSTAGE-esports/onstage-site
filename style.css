@@ -315,3 +315,25 @@ section{
 #partner .card{
   text-align:center;
 }
+.contact{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+  margin-top:20px;
+}
+.contact a{
+  display:inline-block;
+  padding:15px 25px;
+  background:#FFF100;
+  color:#111;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:700;
+  transition:0.3s ease;
+}
+
+.contact a:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
