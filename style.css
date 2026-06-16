@@ -520,3 +520,11 @@ nav{
   font-size:18px;
   line-height:1.8;
 }
+.partner-logo{
+  max-width:70px;
+}
+
+#partner .card p{
+  font-size:22px;
+  font-weight:700;
+}
