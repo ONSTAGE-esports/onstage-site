@@ -8,391 +8,155 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:"Zen Kaku Gothic New",sans-serif;
-background:
-linear-gradient(
-135deg,
-#7B70B2 0%,
-#5D5298 50%,
-#2B2547 100%
-);
-color:#EFEFEF;
-overflow-x:hidden;
-}
-
-header{
-position:fixed;
-top:0;
-width:100%;
-padding:24px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,.15);
-backdrop-filter:blur(10px);
-z-index:100;
-}
-
-.logo{
-font-size:28px;
-font-weight:900;
-letter-spacing:2px;
-font-family:"Orbitron",sans-serif;
-}
-
-nav a{
-text-decoration:none;
-color:#EFEFEF;
-margin-left:24px;
-transition:.3s;
-}
-
-nav a:hover{
-color:#FFF100;
-}
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-position:relative;
-overflow:hidden;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-width:700px;
-height:700px;
-background:#FFF100;
-border-radius:50%;
-filter:blur(250px);
-opacity:.15;
-top:-300px;
-right:-300px;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-width:500px;
-height:500px;
-background:#FADCE9;
-border-radius:50%;
-filter:blur(200px);
-opacity:.15;
-bottom:-200px;
-left:-200px;
-}
-
-.hero h1{
-font-family:"Orbitron",sans-serif;
-font-size:clamp(70px,10vw,150px);
-letter-spacing:10px;
-z-index:1;
-}
-
-.hero h2{
-font-size:clamp(20px,3vw,38px);
-color:#FFF100;
-margin-top:10px;
-letter-spacing:3px;
-z-index:1;
-}
-
-.hero p{
-margin-top:30px;
-font-size:20px;
-line-height:2;
-max-width:700px;
-z-index:1;
-}
-
-.btn{
-margin-top:40px;
-padding:15px 40px;
-background:#FFF100;
-color:#111;
-text-decoration:none;
-font-weight:bold;
-border-radius:12px;
-transition:.3s;
-z-index:1;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-section{
-padding:120px 10%;
-}
-
-.section-title{
-font-size:48px;
-color:#FFF100;
-margin-bottom:40px;
-}
-
-.about{
-max-width:900px;
-line-height:2;
-font-size:18px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-}
-
-.card{
-background:rgba(250,220,233,.08);
-backdrop-filter:blur(10px);
-padding:30px;
-border-radius:20px;
-border:1px solid rgba(255,241,0,.25);
-}
-
-.card h3{
-color:#FFF100;
-margin-bottom:10px;
-}
-
-.sponsor{
-background:rgba(250,220,233,.08);
-padding:40px;
-border-radius:20px;
-line-height:2;
-}
-
-.contact{
-text-align:center;
-}
-
-.contact a{
-display:inline-block;
-margin:10px;
-padding:15px 30px;
-background:#FFF100;
-color:#111;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-transition:.3s;
-}
-
-.contact a:hover{
-transform:translateY(-3px);
-}
-
-footer{
-padding:40px;
-text-align:center;
-border-top:1px solid rgba(255,255,255,.1);
-}
-.sponsor-marquee{
-  overflow:hidden;
-  margin-bottom:20px;
-}
-
-.sponsor-marquee .track{
-  display:flex;
-  gap:40px;
-  animation:scroll 20s linear infinite;
-}
-
-.sponsor-marquee img{
-  height:50px;
-  object-fit:contain;
-}
-
-@keyframes scroll{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-50%);}
-}
-  
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
+  <div class="logo">ON STAGE:</div>
 
-<div class="logo">
-ON STAGE:
-</div>
-
-<nav>
-<a href="#about">私たちについて</a>
-<a href="#events">開催イベント</a>
-<a href="sponsor.html">協賛について</a>
-<a href="#contact">お問い合わせ</a>
-</nav>
-
+  <nav>
+    <a href="#about">私たちについて</a>
+    <a href="#events">開催イベント</a>
+    <a href="#sponsor">協賛について</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
 </header>
 
 <section class="hero">
+  <h1>ON STAGE:</h1>
+  <h2>EVERYONE HAS A STAGE.</h2>
 
-<h1>ON STAGE:</h1>
+  <p>
+    学生が創る、次世代のeスポーツイベント<br>
+    全員が主役になれる舞台
+  </p>
 
-<h2>EVERYONE HAS A STAGE.</h2>
-
-<p>
-学生が創る、次世代のeスポーツイベント<br>
-全員が主役になれる舞台
-</p>
-
-<a href="#about" class="btn">
-もっと見る
-</a>
-
+  <a href="#about" class="btn">もっと見る</a>
 </section>
 
 <section id="about">
+  <h2 class="section-title">私たちについて</h2>
 
-<h2 class="section-title">
-私たちについて
-</h2>
-
-<div class="about">
-
-ON STAGE:は学生主体で運営するeスポーツコミュニティです。
-
-大会運営、配信制作、映像制作、デザイン制作。
-
-それぞれの得意を持った学生が集まり、
-ひとつの舞台を創り上げています。
-
-私たちは、プレイヤーだけではなく、
-運営やクリエイターも輝ける環境を目指しています。
-
-挑戦したい学生が、一歩を踏み出せる舞台。
-
-</div>
-
+  <div class="about">
+    ON STAGE:は学生主体で運営するeスポーツコミュニティです。<br><br>
+    大会運営、配信制作、映像制作、デザイン制作。<br><br>
+    それぞれの得意を持った学生が集まり、<br>
+    ひとつの舞台を創り上げています。<br><br>
+    私たちは、プレイヤーだけではなく、<br>
+    運営やクリエイターも輝ける環境を目指しています。
+  </div>
 </section>
 
 <section id="events">
+  <h2 class="section-title">開催イベント</h2>
 
-<h2 class="section-title">
-開催イベント
-</h2>
+  <div class="cards">
 
-<div class="cards">
+    <div class="card">
+      <h3>PARAVOX vol 1.0</h3>
+      <p>VALORANT Tournament</p>
+    </div>
 
-<div class="card">
-<h3>ON STAGE: PARAVOX vol 1.0</h3>
-<p>VALORANT Tournament</p>
-</div>
+    <div class="card">
+      <h3>VALORANT vol 2.0</h3>
+      <p>VALORANT Tournament</p>
+    </div>
 
-<div class="card">
-<h3>ON STAGE: VALORANT vol 2.0</h3>
-<p>VALORANT Tournament</p>
-</div>
-  
-<div class="card">
-<h3>ON STAGE: VALORANT vol 3.0</h3>
-<p>VALORANT Tournament</p>
-</div>
+    <div class="card">
+      <h3>VALORANT vol 3.0</h3>
+      <p>VALORANT Tournament</p>
+    </div>
 
-<div class="card">
-<h3>ON STAGE: VALORANT vol 4.0</h3>
-<p>VALORANT Tournament</p>
-</div>
+    <div class="card">
+      <h3>VALORANT vol 4.0</h3>
+      <p>VALORANT Tournament</p>
+    </div>
 
-<div class="card">
-<h3>ON STAGE: VALORANT vol 5.0</h3>
-<p>VALORANT Tournament</p>
-</div> 
-  
-<div class="card">
-<h3>ON STAGE: VALORANT vol 6.0</h3>
-<p>VALORANT Tournament</p>
-</div>
-  
-</div>
+    <div class="card">
+      <h3>VALORANT vol 5.0</h3>
+      <p>VALORANT Tournament</p>
+    </div>
 
+    <div class="card">
+      <h3>VALORANT vol 6.0</h3>
+      <p>VALORANT Tournament</p>
+    </div>
+
+  </div>
 </section>
 
 <section id="sponsor">
 
-<h2 class="section-title">
-協賛について
-</h2>
+  <h2 class="section-title">協賛について</h2>
 
-<div class="sponsor">
+  <div class="sponsor">
 
-  <div class="sponsor-marquee">
-    <!-- ここに企業ロゴ並べる -->
-    <div class="track">
-      <img src="logo1.png">
-      <img src="logo2.png">
-      <img src="logo3.png">
+    <!-- 2段ループ -->
+    <div class="sponsor-marquee">
+
+      <div class="track track-left">
+        <img src="images/logo1.png">
+        <img src="images/logo2.png">
+        <img src="images/logo3.png">
+        <img src="images/logo4.png">
+
+        <!-- ループ用コピー -->
+        <img src="images/logo1.png">
+        <img src="images/logo2.png">
+        <img src="images/logo3.png">
+        <img src="images/logo4.png">
+      </div>
+
+      <div class="track track-right">
+        <img src="images/logo5.png">
+        <img src="images/logo6.png">
+        <img src="images/logo7.png">
+        <img src="images/logo8.png">
+
+        <!-- ループ用コピー -->
+        <img src="images/logo5.png">
+        <img src="images/logo6.png">
+        <img src="images/logo7.png">
+        <img src="images/logo8.png">
+      </div>
+
     </div>
+
+    ON STAGE:では学生eスポーツシーンの発展を支援していただける企業様を募集しております。<br><br>
+
+    ・大会配信内での露出<br>
+    ・SNSでの企業紹介<br>
+    ・ロゴ掲載<br>
+    ・商品紹介企画<br>
+    ・学生層への認知拡大
+
   </div>
 
-  <p>
-    ON STAGE:では学生eスポーツシーンの発展を支援していただける企業様を募集しております。
-  </p>
-
-  <br><br>
-
-  ・大会配信内での露出<br>
-  ・SNSでの企業紹介<br>
-  ・ロゴ掲載<br>
-  ・商品紹介企画<br>
-  ・学生層への認知拡大
-
-</div>
 </section>
 
 <section id="contact">
 
-<h2 class="section-title">
-お問い合わせ
-</h2>
+  <h2 class="section-title">お問い合わせ</h2>
 
-<p style="text-align:center;margin-bottom:30px;">
-大会に関するご質問・協賛のご相談はお気軽にお問い合わせください。
-</p>
+  <div class="contact">
 
-<div class="contact">
+    <a href="https://x.com/ons_tage?s=11&t=ujU5K8MXFxVhaYjY_45jpQ" target="_blank">
+      公式X
+    </a>
 
-<a href="https://x.com/ons_tage?s=11&t=ujU5K8MXFxVhaYjY_45jpQ" target="_blank">
-公式X
-</a>
+    <a href="mailto:ONSTAGE.Student@gmail.com">
+      メールで問い合わせる
+    </a>
 
-<a href="mailto:ONSTAGE.Student@gmail.com">
-メールで問い合わせる
-</a>
-
-</div>
+  </div>
 
 </section>
 
 <footer>
-
-ON STAGE:
-
-EVERYONE HAS A STAGE.
-
-© 2026 ON STAGE:
-
+  ON STAGE:<br>
+  © 2026 ON STAGE:
 </footer>
 
 </body>
