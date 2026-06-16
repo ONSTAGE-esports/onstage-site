@@ -463,3 +463,61 @@ border-bottom:
 1px solid rgba(255,241,0,.15);
 
 }
+
+.partner-subtitle{
+
+text-align:center;
+
+margin-top:-20px;
+
+margin-bottom:40px;
+
+opacity:.7;
+
+}
+
+.partner-logo{
+
+width:180px;
+
+height:80px;
+
+object-fit:contain;
+
+display:block;
+
+margin:0 auto 20px;
+
+}
+
+.coming-soon{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:180px;
+
+}
+
+#vol7 .btn{
+
+display:block;
+
+width:fit-content;
+
+margin:16px auto;
+
+}
+
+section{
+
+border-bottom:
+
+1px solid rgba(255,241,0,.15);
+
+}
