@@ -6,11 +6,55 @@
 <title>ON STAGE:</title>
 
 <style>
-body{
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
 background:#0f1923;
 color:white;
-font-family:Arial,sans-serif;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%, rgba(255,70,85,.15), transparent 30%),
+radial-gradient(circle at 80% 80%, rgba(255,70,85,.1), transparent 30%);
+z-index:-1;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(15,25,35,.85);
+backdrop-filter:blur(10px);
+z-index:100;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#ff4655;
+letter-spacing:2px;
+}
+
+nav a{
+margin-left:20px;
+color:white;
+text-decoration:none;
 }
 
 .hero{
@@ -20,71 +64,253 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding:20px;
 }
 
-h1{
-font-size:70px;
-margin:0;
+.hero h1{
+font-size:clamp(60px,10vw,120px);
+color:#ff4655;
+text-shadow:
+0 0 20px rgba(255,70,85,.6);
 }
 
-p{
+.hero p{
+margin-top:20px;
 font-size:20px;
+max-width:700px;
 }
 
 .btn{
+margin-top:30px;
+display:inline-block;
 padding:15px 40px;
 background:#ff4655;
+border-radius:8px;
 color:white;
 text-decoration:none;
-border-radius:10px;
+font-weight:bold;
 }
 
 section{
-padding:100px 10%;
+padding:120px 10%;
+}
+
+.section-title{
+font-size:50px;
+color:#ff4655;
+margin-bottom:40px;
+}
+
+.about{
+line-height:2;
+font-size:18px;
+max-width:900px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
-background:#1a2634;
-padding:20px;
+background:#16202c;
+padding:30px;
 border-radius:15px;
-margin-top:20px;
+border:1px solid rgba(255,70,85,.2);
+transition:.3s;
 }
-</style>
 
+.card:hover{
+transform:translateY(-5px);
+border-color:#ff4655;
+}
+
+.card h3{
+margin-bottom:10px;
+color:#ff4655;
+}
+
+.sponsor{
+background:#16202c;
+padding:40px;
+border-radius:15px;
+line-height:2;
+}
+
+.member{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.member div{
+background:#16202c;
+padding:25px;
+border-radius:12px;
+text-align:center;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+display:inline-block;
+margin:10px;
+padding:15px 30px;
+background:#ff4655;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+footer{
+padding:40px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.1);
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="hero">
+<header>
+<div class="logo">ON STAGE:</div>
+
+<nav>
+<a href="#about">ABOUT</a>
+<a href="#events">EVENTS</a>
+<a href="#sponsor">SPONSOR</a>
+<a href="#contact">CONTACT</a>
+</nav>
+</header>
+
+<section class="hero">
 
 <h1>ON STAGE:</h1>
 
 <p>
-学生が創るeスポーツイベント
+学生が創る、次世代のeスポーツイベント
 </p>
 
-<a class="btn" href="#about">
-ABOUT
+<a href="#about" class="btn">
+EXPLORE
 </a>
 
-</div>
+</section>
 
 <section id="about">
 
-<h2>ABOUT</h2>
+<h2 class="section-title">
+ABOUT
+</h2>
+
+<div class="about">
+
+ON STAGE:は学生主体で運営するeスポーツコミュニティです。
+
+VALORANT大会の企画運営を中心に、
+配信制作・映像制作・デザイン制作を行い、
+学生が挑戦できる舞台を創り続けています。
+
+</div>
+
+</section>
+
+<section id="events">
+
+<h2 class="section-title">
+EVENTS
+</h2>
+
+<div class="cards">
 
 <div class="card">
-ON STAGE:は学生主体で運営する
-eスポーツコミュニティです。
+<h3>ON STAGE: vol.7</h3>
+<p>VALORANT Tournament</p>
+</div>
+
+<div class="card">
+<h3>ON STAGE: vol.6</h3>
+<p>VALORANT Tournament</p>
+</div>
+
+<div class="card">
+<h3>ON STAGE: vol.5</h3>
+<p>VALORANT Tournament</p>
+</div>
+
+<div class="card">
+<h3>ON STAGE: vol.4</h3>
+<p>VALORANT Tournament</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="sponsor">
+
+<h2 class="section-title">
+SPONSOR
+</h2>
+
+<div class="sponsor">
+
+学生eスポーツシーンの発展を支援していただける企業様を募集しております。
+
+<br><br>
+
+・配信内露出<br>
+・SNS掲載<br>
+・ロゴ掲載<br>
+・商品紹介<br>
+・学生層への認知拡大
+
 </div>
 
 </section>
 
 <section>
 
-<h2>ACHIEVEMENTS</h2>
+<h2 class="section-title">
+MEMBER
+</h2>
+
+<div class="member">
+
+<div>大会運営</div>
+<div>デザイナー</div>
+<div>動画編集</div>
+<div>配信オペレーター</div>
+
+</div>
 
 </section>
+
+<section id="contact">
+
+<h2 class="section-title">
+CONTACT
+</h2>
+
+<div class="contact">
+
+<a href="#">X</a>
+<a href="#">Discord</a>
+<a href="#">Mail</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 ON STAGE:
+
+</footer>
 
 </body>
 </html>
