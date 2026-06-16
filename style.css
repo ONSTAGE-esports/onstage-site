@@ -15,21 +15,32 @@ body{
 /* ===== HEADER ===== */
 
 header{
-  position:fixed;
-  top:0;
-  width:100%;
-  padding:20px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
 
-  background:rgba(20,20,20,.6);
+position:fixed;
 
-  backdrop-filter:blur(12px);
+top:0;
 
-  z-index:100;
+left:0;
+
+width:100%;
+
+padding:20px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(123,112,178,0.92);
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 4px 20px rgba(0,0,0,.15);
+
+z-index:100;
+
 }
-
 .logo{
   display:flex;
   align-items:center;
@@ -338,4 +349,25 @@ font-size:32px;
   font-family:"Orbitron",sans-serif;
   font-size:28px;
   font-weight:900;
+}
+.logo span{
+
+color:#FFFFFF;
+
+}
+
+nav a{
+
+color:#FFFFFF;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+nav a:hover{
+
+color:#FFF100;
+
 }
