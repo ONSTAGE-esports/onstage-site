@@ -491,3 +491,12 @@ section{
     flex-direction:column;
   }
 }
+nav{
+  position:relative;
+  z-index:1000;
+}
+
+.hero{
+  position:relative;
+  z-index:1;
+}
