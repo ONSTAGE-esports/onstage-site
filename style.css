@@ -427,3 +427,32 @@ width:fit-content;
 margin:16px auto;
 
 }
+section{
+
+position:relative;
+
+}
+
+section::before{
+
+content:"";
+
+position:absolute;
+
+top:40px;
+
+left:5%;
+
+width:90%;
+
+height:calc(100% - 80px);
+
+background:rgba(255,255,255,.03);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:28px;
+
+pointer-events:none;
+
+}
