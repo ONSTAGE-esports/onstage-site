@@ -402,7 +402,12 @@ section{
 /* ===== YOUTUBE ===== */
 
 #youtube .about-card p{
-  font-size:26px;
+  font-size:24px;
+}
+#youtube .about-card{
+  max-width:800px;
+  margin:0 auto;
+  text-align:center;
 }
 
 /* ===== CARD HEIGHT ===== */
