@@ -159,13 +159,13 @@ nav a:hover::after{
 
 .hero h2{
   color:#FFF100;
-    font-size:60px;
+    font-size:50px;
   margin:12px 0 24px;
   animation:fadeUp 0.8s ease-out 0.4s both;
 }
 
 .hero p{
-  font-size:40px;
+  font-size:35px;
   font-weight:700;
   line-height:2;
   animation:fadeUp 0.8s ease-out 0.6s both;
