@@ -5,11 +5,25 @@
   scroll-behavior:smooth;
 }
 
+/* ===== GLOBAL ANIM ===== */
+
 body{
   font-family:"Zen Kaku Gothic New",sans-serif;
   background:#2B2547;
   color:#EFEFEF;
   overflow-x:hidden;
+  animation:fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 /* ===== HEADER ===== */
@@ -27,6 +41,17 @@ header{
   backdrop-filter:blur(12px);
   box-shadow:0 4px 20px rgba(0,0,0,.15);
   z-index:100;
+
+  animation:slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown{
+  from{
+    transform:translateY(-100%);
+  }
+  to{
+    transform:translateY(0);
+  }
 }
 
 /* ===== LOGO ===== */
@@ -41,6 +66,11 @@ header{
   width:60px;
   height:60px;
   object-fit:contain;
+  transition:transform 0.3s ease;
+}
+
+.logo img:hover{
+  transform:scale(1.1) rotate(-3deg);
 }
 
 .logo span{
@@ -61,17 +91,28 @@ nav a{
   color:#FFFFFF;
   text-decoration:none;
   font-weight:600;
-  outline:none;
+  position:relative;
+  transition:0.3s ease;
+}
+
+/* 下線アニメーション */
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0%;
+  height:2px;
+  background:#FFF100;
+  transition:0.3s ease;
 }
 
 nav a:hover{
   color:#FFF100;
 }
 
-nav a:focus,
-nav a:active{
-  outline:none;
-  text-decoration:none;
+nav a:hover::after{
+  width:100%;
 }
 
 /* ===== HERO ===== */
@@ -91,6 +132,19 @@ nav a:active{
   align-items:center;
   text-align:center;
   padding:120px 10%;
+
+  animation:heroZoom 1.2s ease-out;
+}
+
+@keyframes heroZoom{
+  from{
+    transform:scale(1.05);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
 }
 
 .hero-content{
@@ -100,15 +154,29 @@ nav a:active{
 .hero h1{
   font-family:"Orbitron";
   font-size:90px;
+  animation:fadeUp 0.8s ease-out 0.2s both;
 }
 
 .hero h2{
   color:#FFF100;
   margin:12px 0 24px;
+  animation:fadeUp 0.8s ease-out 0.4s both;
 }
 
 .hero p{
   line-height:2;
+  animation:fadeUp 0.8s ease-out 0.6s both;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 /* ===== BUTTON ===== */
@@ -119,6 +187,7 @@ nav a:active{
   gap:20px;
   flex-wrap:wrap;
   margin-top:40px;
+  animation:fadeUp 0.8s ease-out 0.8s both;
 }
 
 .btn{
@@ -129,6 +198,12 @@ nav a:active{
   text-decoration:none;
   border-radius:12px;
   font-weight:700;
+  transition:0.3s ease;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(0,0,0,.25);
 }
 
 .btn-outline{
@@ -141,6 +216,25 @@ nav a:active{
 
 section{
   padding:120px 10%;
+}
+
+/* スクロールアニメ用（JSなし軽量版） */
+section{
+  opacity:0;
+  transform:translateY(30px);
+  animation:sectionIn 0.8s ease-out forwards;
+}
+
+section:nth-of-type(1){ animation-delay:0.1s; }
+section:nth-of-type(2){ animation-delay:0.2s; }
+section:nth-of-type(3){ animation-delay:0.3s; }
+section:nth-of-type(4){ animation-delay:0.4s; }
+
+@keyframes sectionIn{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 .section-title{
@@ -161,6 +255,12 @@ section{
   background:rgba(255,255,255,.05);
   padding:30px;
   border-radius:20px;
+  transition:0.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 30px rgba(0,0,0,.25);
 }
 
 .card h3{
@@ -173,30 +273,15 @@ section{
 footer{
   padding:40px;
   text-align:center;
+  opacity:0;
+  animation:fadeIn 1s ease-out 1s forwards;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== REDUCED MOTION対応 ===== */
 
-@media(max-width:768px){
-  header{
-    flex-direction:column;
-    gap:16px;
-  }
-
-  nav{
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  .hero h1{
-    font-size:56px;
-  }
-
-  .hero h2{
-    font-size:18px;
-  }
-
-  .section-title{
-    font-size:32px;
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation:none !important;
+    transition:none !important;
   }
 }
