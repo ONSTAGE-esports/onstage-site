@@ -12,7 +12,7 @@ body{
   background:#2B2547;
   color:#EFEFEF;
   overflow-x:hidden;
-  animation:fadeIn 0.9s ease-out;
+  animation:fadeIn 0.8s ease-out;
 }
 
 @keyframes fadeIn{
