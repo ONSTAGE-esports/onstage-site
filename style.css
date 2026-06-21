@@ -514,14 +514,18 @@ nav{
   line-height:1.8;
 }
 .partner-logo{
+  width:100%;
   max-width:50px;
+  height:auto;
+  display:block;
+  margin:0 auto 15px;
+  object-fit:contain;
 }
 
 #partner .card p{
   font-size:22px;
   font-weight:700;
 }
-
 .contact-text{
   text-align:center;
   font-size:18px;
