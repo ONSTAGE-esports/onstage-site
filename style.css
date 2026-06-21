@@ -73,9 +73,6 @@ nav a{
 nav a:hover{
   color:#FFF100;
 }
-
-
-
 /* ===== HERO ===== */
 
 
@@ -87,6 +84,7 @@ position:relative;
 
 overflow:hidden;
 
+isolation:isolate;
 
 display:flex;
 
@@ -94,14 +92,12 @@ justify-content:center;
 
 align-items:center;
 
-
 text-align:center;
-
 
 padding:120px 10%;
 
-
 }
+
 
 
 /* 背景動画 */
@@ -109,7 +105,6 @@ padding:120px 10%;
 .bg-video{
 
 position:absolute;
-
 
 top:0;
 
@@ -124,15 +119,16 @@ height:100%;
 object-fit:cover;
 
 
-z-index:0;
+z-index:-2;
 
 
 }
 
 
-/* 動画の上の色 */
 
-.hero::after{
+/* 動画を少し暗くする */
+
+.hero::before{
 
 
 content:"";
@@ -144,26 +140,26 @@ position:absolute;
 inset:0;
 
 
-
 background:
 
 linear-gradient(
 
-rgba(90,75,150,.35),
+rgba(90,75,150,.45),
 
-rgba(43,37,71,.55)
+rgba(43,37,71,.65)
 
 );
 
 
-
-z-index:1;
+z-index:-1;
 
 
 }
 
 
 
+
+/* 文字 */
 
 .hero-content{
 
@@ -195,6 +191,7 @@ color:#EFEFEF;
 
 
 
+
 .hero h2{
 
 
@@ -211,6 +208,7 @@ margin:15px 0;
 
 
 
+
 .hero p{
 
 
@@ -224,6 +222,7 @@ line-height:1.8;
 
 
 }
+
 
 
 /* ===== BUTTON ===== */
