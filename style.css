@@ -644,7 +644,5 @@ text-align:center;
 }
 
 .event-card a:hover{
-  background:#EFEFEF;
-  color:#2B2547;
-  transform:translateY(-3px);
+  color:#FFFFFF;
 }
