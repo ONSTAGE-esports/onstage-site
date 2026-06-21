@@ -589,3 +589,19 @@ nav{
   transform:translateY(-8px);
   box-shadow:0 15px 30px rgba(0,0,0,.25);
 }
+/* ===== EVENTS SPACE ===== */
+
+#events .cards{
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+}
+
+#events .card{
+  min-height:150px;
+  padding:30px;
+}
+#events .cards{
+  max-width:1000px;
+  margin:0 auto;
+}
