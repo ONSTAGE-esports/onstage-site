@@ -576,3 +576,16 @@ nav{
   position:relative;
   z-index:2;
 }
+.partner-link{
+  text-decoration:none;
+  color:white;
+}
+
+.partner-link .card{
+  cursor:pointer;
+}
+
+.partner-link:hover .card{
+  transform:translateY(-8px);
+  box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
